@@ -1,0 +1,176 @@
+/* =========================================
+   Estilos da Página de Login e Cadastro
+   ========================================= */
+
+.principal-login {
+    min-height: calc(100vh - 160px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+.container-login {
+    width: 100%;
+    max-width: 450px; /* Tamanho para o login */
+}
+
+/* Tamanho um pouco maior para o cadastro */
+.container-cadastro {
+    max-width: 550px;
+}
+
+.cartao-login {
+    background-color: var(--branco);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--cor-secundaria);
+}
+
+.cabecalho-login {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cabecalho-login h2 {
+    color: var(--cor-primaria);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.cabecalho-login p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.grupo-formulario {
+    margin-bottom: 1.5rem;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--cor-texto);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.grupo-formulario input,
+.selecao-formulario {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: var(--transicao);
+    box-sizing: border-box;
+}
+
+.grupo-formulario input:focus,
+.selecao-formulario:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 5px rgba(0, 68, 136, 0.2);
+}
+
+/* Para dividir campos lado a lado (ex: senhas) */
+.linha-formulario {
+    display: flex;
+    gap: 1rem;
+}
+
+.coluna-formulario {
+    flex: 1;
+}
+
+.asterisco-obrigatorio {
+    color: #e63946;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+.opcoes-formulario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 0.85rem;
+}
+
+.lembrar-mim,
+.checkbox-termos {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.esqueceu-senha, 
+.link-termos {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    transition: var(--transicao);
+}
+
+.esqueceu-senha:hover, 
+.link-termos:hover {
+    text-decoration: underline;
+    color: var(--cor-secundaria);
+}
+
+.botao-enviar {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--cor-primaria);
+    color: var(--branco);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.botao-enviar:hover {
+    background-color: #003366;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.links-rodape-login {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.links-rodape-login a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links-rodape-login a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade específica dos formulários */
+@media (max-width: 500px) {
+    .linha-formulario {
+        flex-direction: column;
+        gap: 0;
+    }
+    .coluna-formulario {
+        margin-bottom: 1.5rem;
+    }
+    .coluna-formulario:last-child {
+        margin-bottom: 0;
+    }
+    .opcoes-formulario {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}

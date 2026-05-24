@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Acadêmico | Login</title>
+    <link rel="stylesheet" href="pagina_inicio.css">
+    <link rel="stylesheet" href="pagina_login.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="logotipo">
+            <a href="pagina_inicio.html"><h1>Portal<span>Acadêmico</span></h1></a>
+        </div>
+        <nav aria-label="Navegação principal">
+            <ul class="menu-navegacao">
+                <li><a href="pagina_inicio.html">Início</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="pagina_login.html" class="ativo">Área do Aluno</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="principal-login">
+        <section class="container-login">
+            <div class="cartao-login">
+                <div class="cabecalho-login">
+                    <h2>Acesso ao Aluno</h2>
+                    <p>Entre com suas credenciais acadêmicas</p>
+                </div>
+
+                <form class="formulario-login" action="#" method="POST">
+                    <div class="grupo-formulario">
+                        <label for="email">E-mail ou Matrícula</label>
+                        <input type="email" id="email" placeholder="exemplo@academico.com.br" required>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <div class="opcoes-formulario">
+                        <label class="lembrar-mim">
+                            <input type="checkbox"> Lembrar de mim
+                        </label>
+                        <a href="#" class="esqueceu-senha">Esqueceu a senha?</a>
+                    </div>
+
+                    <button type="submit" class="botao-enviar">Entrar no Portal</button>
+                </form>
+
+                <div class="links-rodape-login">
+                    <p>Não possui acesso? <a href="cadastro.html">Solicite seu cadastro</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-site">
+        <div class="base-rodape">
+            <p>© 2026 Portal Acadêmico. Todos os direitos reservados. Trabalho acadêmico.</p>
+        </div>
+    </footer>
+
+    <script src="pagina_inicio.js"></script>
+</body>
+</html>

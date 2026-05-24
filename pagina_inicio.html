@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Acadêmico | Início</title>
+    <link rel="stylesheet" href="pagina_inicio.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="logotipo">
+            <a href="pagina_inicio.html"><h1>Portal<span>Acadêmico</span></h1></a>
+        </div>
+        <nav aria-label="Navegação principal">
+            <ul class="menu-navegacao">
+                <li><a href="pagina_inicio.html" class="ativo">Início</a></li>
+                <li><a href="pagina_login.html">Login</a></li>
+                <li><a href="#cursos-destaque">Cursos</a></li>
+                <li><a href="pagina_login.html">Área do Aluno</a></li>
+                <li><a href="#rodape-site">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destaque-principal">
+            <div class="conteudo-destaque">
+                <h2>Transforme seu futuro com a tecnologia</h2>
+                <p>Encontre os melhores cursos de graduação e pós-graduação. Dê o próximo passo na sua carreira.</p>
+                
+                <form class="formulario-pesquisa" action="#" method="GET">
+                    <label for="curso-busca" class="leitor-tela-apenas">Buscar por curso</label>
+                    <input type="text" id="curso-busca" placeholder="Qual curso você procura?" required>
+                    <button type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="cursos-destaque" class="secao-cursos">
+            <h2>Cursos em Destaque</h2>
+            <div class="container-cartoes">
+                
+                <article class="cartao">
+                    <div class="espaco-imagem">📚</div>
+                    <div class="conteudo-cartao">
+                        <h3>Análise e Desenvolvimento de Sistemas</h3>
+                        <p>Aprenda a projetar, documentar, testar e implementar sistemas computacionais.</p>
+                        <a href="#" class="botao-link">Saber mais &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <div class="espaco-imagem">💻</div>
+                    <div class="conteudo-cartao">
+                        <h3>Ciência da Computação</h3>
+                        <p>Domine os fundamentos da computação, algoritmos e inteligência artificial.</p>
+                        <a href="#" class="botao-link">Saber mais &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <div class="espaco-imagem">🔒</div>
+                    <div class="conteudo-cartao">
+                        <h3>Segurança da Informação</h3>
+                        <p>Proteja dados e infraestruturas contra as mais recentes ameaças cibernéticas.</p>
+                        <a href="#" class="botao-link">Saber mais &rarr;</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="rodape-site" class="rodape-site">
+        <div class="conteudo-rodape">
+            <div class="secao-rodape">
+                <h3>Portal Acadêmico</h3>
+                <p>Transformando o futuro através da tecnologia e da educação continuada. Seu próximo passo começa aqui.</p>
+            </div>
+            <div class="secao-rodape">
+                <h3>Fale Conosco</h3>
+                <ul class="informacoes-contato">
+                    <li>📍 Av. da Tecnologia, 1024 - Bloco C<br>São Paulo - SP, 01000-000</li>
+                    <li>📞 (11) 4002-8922</li>
+                    <li>✉️ contato@portalacademico.edu.br</li>
+                </ul>
+            </div>
+            <div class="secao-rodape">
+                <h3>Redes Sociais</h3>
+                <ul class="links-sociais">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="base-rodape">
+            <p>© 2026 Portal Acadêmico. Todos os direitos reservados. Trabalho acadêmico.</p>
+        </div>
+    </footer>
+
+    <script src="pagina_inicio.js"></script>
+</body>
+</html>
