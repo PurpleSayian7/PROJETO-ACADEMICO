@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Acadêmico | Pagamento Seguro</title>
+    <link rel="stylesheet" href="pagina_inicio.css">
+    <link rel="stylesheet" href="pagina_pagamento.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="logotipo">
+            <a href="pagina_inicio.html"><h1>Portal<span>Acadêmico</span></h1></a>
+        </div>
+        <nav aria-label="Navegação principal">
+            <ul class="menu-navegacao">
+                <li><a href="pagina_inicio.html">Início</a></li>
+                <li><a href="pagina_login.html">Login</a></li>
+                <li><a href="pagina_inicio.html#cursos-destaque">Cursos</a></li>
+                <li><a href="pagina_login.html" class="ativo">Área do Aluno</a></li>
+                <li><a href="#rodape-site">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="principal-pagamento">
+        <div class="container-checkout">
+            
+            <aside class="bloco-checkout">
+                <h2>Resumo da Matrícula</h2>
+                
+                <div class="item-pedido destaque">
+                    <span>Análise e Desenvolvimento de Sistemas</span>
+                </div>
+                <div class="item-pedido">
+                    <span>Taxa de Matrícula</span>
+                    <span>R$ 150,00</span>
+                </div>
+                <div class="item-pedido">
+                    <span>1ª Mensalidade</span>
+                    <span>R$ 450,00</span>
+                </div>
+                
+                <div class="total-pedido">
+                    <span>Total a Pagar:</span>
+                    <span>R$ 600,00</span>
+                </div>
+            </aside>
+
+            <section class="bloco-checkout">
+                <h2>Forma de Pagamento</h2>
+
+                <div class="seletor-pagamento">
+                    <label>
+                        <input type="radio" name="metodo-pagamento" checked>
+                        <div class="opcao-pagamento">💳 Cartão de Crédito</div>
+                    </label>
+                    <label>
+                        <input type="radio" name="metodo-pagamento">
+                        <div class="opcao-pagamento">💠 PIX</div>
+                    </label>
+                    <label>
+                        <input type="radio" name="metodo-pagamento">
+                        <div class="opcao-pagamento">📄 Boleto</div>
+                    </label>
+                </div>
+
+                <form action="#" method="POST">
+                    
+                    <div class="grupo-formulario">
+                        <label for="nome-cartao">Nome Impresso no Cartão</label>
+                        <input type="text" id="nome-cartao" placeholder="EX: JOAO S DA SILVA" required>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="numero-cartao">Número do Cartão</label>
+                        <input type="text" id="numero-cartao" placeholder="0000 0000 0000 0000" maxlength="19" pattern="\d{4}\s?\d{4}\s?\d{4}\s?\d{4}" title="Digite os 16 números do cartão" required>
+                    </div>
+
+                    <div class="linha-cartao">
+                        <div class="grupo-formulario coluna-formulario">
+                            <label for="validade">Validade (MM/AA)</label>
+                            <input type="text" id="validade" placeholder="12/30" maxlength="5" pattern="\d{2}/\d{2}" title="Formato MM/AA" required>
+                        </div>
+                        
+                        <div class="grupo-formulario coluna-formulario">
+                            <label for="cvv">CVV (Código de Segurança)</label>
+                            <input type="text" id="cvv" placeholder="123" maxlength="4" pattern="\d{3,4}" title="3 ou 4 dígitos" required>
+                        </div>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="parcelas">Parcelamento</label>
+                        <select id="parcelas" class="grupo-formulario input" style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                            <option value="1">1x de R$ 600,00 sem juros</option>
+                            <option value="2">2x de R$ 300,00 sem juros</option>
+                            <option value="3">3x de R$ 200,00 sem juros</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="botao-pagar">🔒 Confirmar Pagamento</button>
+                    
+                    <div class="ambiente-seguro">
+                        🔒 Ambiente 100% Seguro e Criptografado
+                    </div>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <footer id="rodape-site" class="rodape-site">
+        <div class="base-rodape">
+            <p>&copy; 2026 Portal Acadêmico. Todos os direitos reservados. Trabalho acadêmico.</p>
+        </div>
+    </footer>
+
+    <script src="pagina_inicio.js"></script>
+</body>
+</html>
