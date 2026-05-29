@@ -1,0 +1,187 @@
+/* =========================================
+   Estilos da Página de Pagamento
+   ========================================= */
+
+   .principal-pagamento {
+    padding: 3rem 5%;
+    min-height: calc(100vh - 160px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Usando CSS Grid para dividir a tela em duas colunas */
+.container-checkout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* A coluna da direita (cartão) é um pouco maior */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Estilo padrão para os blocos da página */
+.bloco-checkout {
+    background-color: var(--branco);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.bloco-checkout h2 {
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--cor-fundo);
+    padding-bottom: 0.5rem;
+}
+
+/* =========================================
+   Coluna 1: Resumo do Pedido
+   ========================================= */
+.item-pedido {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--cor-texto);
+}
+
+.item-pedido.destaque {
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+.total-pedido {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 2px dashed #ccc;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+}
+
+/* =========================================
+   Coluna 2: Opções de Pagamento
+   ========================================= */
+.seletor-pagamento {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Escondemos o botão de rádio (bolinha) padrão, mas mantemos acessível */
+.seletor-pagamento input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.opcao-pagamento {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #666;
+    transition: var(--transicao);
+}
+
+/* Feedback Visual (Heurística #1): Quando o usuário passa o mouse ou seleciona a opção */
+.opcao-pagamento:hover {
+    border-color: var(--cor-secundaria);
+    background-color: #fff9f2; /* Laranjinha bem claro */
+}
+
+.seletor-pagamento input[type="radio"]:checked + .opcao-pagamento {
+    border-color: var(--cor-secundaria);
+    background-color: #fff9f2;
+    color: var(--cor-secundaria);
+    box-shadow: 0 0 8px rgba(255, 136, 0, 0.3);
+}
+
+/* =========================================
+   Formulário de Cartão de Crédito
+   ========================================= */
+/* Reutilizamos a lógica visual dos inputs da página de login */
+.grupo-formulario {
+    margin-bottom: 1.2rem;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+}
+
+.grupo-formulario input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: var(--transicao);
+    box-sizing: border-box;
+}
+
+.grupo-formulario input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 5px rgba(0, 68, 136, 0.2);
+}
+
+/* Colocar Validade e CVV lado a lado */
+.linha-cartao {
+    display: flex;
+    gap: 1rem;
+}
+
+.botao-pagar {
+    width: 100%;
+    padding: 1rem;
+    background-color: #28a745; /* Verde para indicar sucesso/ação positiva */
+    color: var(--branco);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: var(--transicao);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.botao-pagar:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.ambiente-seguro {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Responsividade: Empilhar em telas menores */
+@media (max-width: 768px) {
+    .container-checkout {
+        grid-template-columns: 1fr; /* Muda para uma coluna só */
+    }
+    
+    .seletor-pagamento {
+        flex-direction: column;
+    }
+}
